@@ -8,6 +8,60 @@
     <title>Chat Application | Socket.io</title>
     <script src="/socket.io/socket.io.js"></script>
 
+    <style>
+        
+        body {
+
+            background-color: #25D366;
+        }
+
+        .container {
+
+            margin: auto; 
+            margin-top: 15%;
+            background-color: #DCF8C6;
+            border-radius: 5px;
+            width: 25%;
+            padding: 5%;
+            padding-top: 1%;
+            padding-bottom: 3%;
+        }
+
+        p {
+
+            text-align: center;
+            font-size: 5vh;
+        }
+
+        #name {
+
+            width: 90%;
+            border: 2px solid #000;
+            border-radius: 5px;
+            background-color: #ECE5DD;
+            padding: 2%;
+            margin: 2%;
+            margin-bottom: 5%;
+        }
+
+        #btn {
+  
+            border: 1.9px solid #000;
+            border-radius: 2px;
+            background-color: #ECE5DD;    
+            padding: 1%;
+            margin-top: 2%; 
+            margin-left: 40%;
+        }
+
+        #message-container {
+            
+            background-color: #34B7F1;
+            width: auto;
+        }
+
+    </style>
+
 </head>
 <body>
     
@@ -30,7 +84,7 @@
 
             user = data.username;
             document.body.innerHTML = '<input type="text" id="message">\
-                                        <button type="button" name="button" onclick="sendMessage()">Send</button>\
+                                        <button type="button" name="button" id="btn-sendmsg" onclick="sendMessage()">Send</button>\
                                         <div id="message-container"></div>';
         });
 
@@ -52,8 +106,11 @@
     </script>
 
     <div id="error-container"></div>
-    <input type="text" name="name" id="name" placeholder="Username">
-    <input type="button" name="button" value="Send" onclick="setUsername()">
-    
+    <div class="container">
+        <p>Let's get started!</p>
+        <input type="text" name="name" id="name" placeholder="Username">
+        <input type="button" name="button" id ="btn" value="Send" onclick="setUsername()">
+    </div>
+
 </body>
 </html>
