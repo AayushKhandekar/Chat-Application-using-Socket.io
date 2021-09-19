@@ -56,8 +56,36 @@
 
         #message-container {
             
-            background-color: #34B7F1;
+            background-color: #ECE5DD;
+            border-radius: 5px;
+            margin: 1%;
             width: auto;
+            padding: 1%;
+            line-height: 30px;
+        }
+
+        #btn-sendmsg {
+
+            position: fixed;
+            bottom: 2%;
+            right: 0.7%;
+            width: 10%;
+            padding: 1%;
+            border-radius: 5px;
+            border: none;
+            border: 1px solid #000;
+        }
+
+        #message {
+
+            position: fixed;
+            bottom: 2%;
+            width: 85%;
+            padding: 1%;
+            margin-left: 1%;
+            border-radius: 5px;
+            border: none;
+            border: 1px solid #000;
         }
 
     </style>
@@ -83,9 +111,9 @@
         socket.on('userSet', function(data){
 
             user = data.username;
-            document.body.innerHTML = '<input type="text" id="message">\
-                                        <button type="button" name="button" id="btn-sendmsg" onclick="sendMessage()">Send</button>\
-                                        <div id="message-container"></div>';
+            document.body.innerHTML = ' <div id="message-container"></div>\
+                                        <input type="text" id="message">\
+                                        <button type="button" name="button" id="btn-sendmsg" onclick="sendMessage()">Send</button>';
         });
 
         function sendMessage(){
