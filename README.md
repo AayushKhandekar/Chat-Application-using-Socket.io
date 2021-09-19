@@ -19,3 +19,14 @@ A chat application implemented using Socket.io and ExpressJS.
 #### 3. Nodemon :
 
     `npm install nodemon`
+
+### Application UI :
+
+Set up a username!
+
+![Screenshot-1](Chat-Application-Screenshot-2.png)
+
+Start Chatting!
+
+![Screenshot-1](Chat-Application-Screenshot-1.png)
+
